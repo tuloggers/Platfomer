@@ -10,8 +10,9 @@ extends CharacterBody2D
 @onready var anim := $AnimatedSprite2D
 @onready var animTree : AnimationTree = $AnimationTree
 
-const pushForce = 100
-const maxPushVelocity = 150
+const pushForce = 50
+const maxPushVelocity = 80
+var canPick:bool = true
 
 var jump_counter : int = 0
 var jump_buffer_counter : int = 0

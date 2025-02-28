@@ -358,3 +358,6 @@ libraries = {
 root_node = NodePath("../AnimatedSprite2D")
 tree_root = SubResource("AnimationNodeStateMachine_2uv5x")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -34)
