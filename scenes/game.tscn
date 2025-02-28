@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://dwfpp2dlvkoj6"]
+[gd_scene load_steps=9 format=4 uid="uid://dwfpp2dlvkoj6"]
 
 [ext_resource type="PackedScene" uid="uid://clhhm5a4dnb5p" path="res://scenes/player.tscn" id="1_3s8q6"]
 [ext_resource type="PackedScene" uid="uid://bf21s6vgkw0l5" path="res://scenes/Fire.tscn" id="3_hcchk"]
 [ext_resource type="Texture2D" uid="uid://0kdvtyy4wsgx" path="res://assets/Tile.png" id="3_lbsbr"]
+[ext_resource type="PackedScene" uid="uid://cha0chqehcljb" path="res://scenes/box.tscn" id="4_d40w5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0t30"]
 texture = ExtResource("3_lbsbr")
@@ -186,6 +187,7 @@ sources/0 = SubResource("TileSetAtlasSource_vw0in")
 
 [node name="Player" parent="." instance=ExtResource("1_3s8q6")]
 position = Vector2(127, 7)
+collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -23)
@@ -205,6 +207,10 @@ tile_set = SubResource("TileSet_ivmbc")
 tile_map_data = PackedByteArray("AAARAAEAAAAGAAUAAAAFAP3/AAAGAAUAAAAcAP3/AAAGAAUAAAACAAEAAAAEAAUAAAADAP3/AAAEAAUAAAAWAP3/AAAEAAUAAAAVAAEAAAAEAAUAAAARAP7/AAAGAAMAAAANAPj/AAAGAAMAAAAJAPz/AAAGAAMAAAADAPn/AAAGAAMAAAAAAP7/AAAGAAMAAAD//wcAAAAGAAMAAAD7/wMAAAAGAAMAAAD6//v/AAAGAAMAAAD5/wMAAAAEAAMAAAD0/wYAAAAEAAMAAADw/wAAAAAEAAMAAAD4//v/AAAEAAMAAAABAPn/AAAEAAMAAAAIAPz/AAAEAAMAAAALAPj/AAAEAAMAAAAPAP7/AAAEAAMAAAAcAAEAAAAGAAUAAAD4/wMAAAAEAAMAAAD4/wAAAAAGAAMAAAD2/wYAAAAGAAMAAAD+//7/AAAEAAMAAAD9/wcAAAAEAAMAAAA=")
 tile_set = SubResource("TileSet_oej4d")
 
+[node name="Layer3" type="TileMapLayer" parent="TileMap"]
+use_parent_material = true
+tile_set = SubResource("TileSet_ivmbc")
+
 [node name="Fire" parent="." instance=ExtResource("3_hcchk")]
 position = Vector2(183, 1)
 
@@ -212,3 +218,9 @@ position = Vector2(183, 1)
 scale = Vector2(0.999142, 1)
 color = Color(0.887977, 0.889548, 0.67326, 1)
 blend_mode = 1
+
+[node name="Box" parent="." instance=ExtResource("4_d40w5")]
+position = Vector2(144, -85)
+scale = Vector2(1, 1)
+collision_layer = 3
+collision_mask = 3
