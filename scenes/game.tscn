@@ -206,7 +206,7 @@ tile_map_data = PackedByteArray("AAARAAEAAAAGAAUAAAAFAP3/AAAGAAUAAAAcAP3/AAAGAAU
 tile_set = SubResource("TileSet_oej4d")
 
 [node name="Fire" parent="." instance=ExtResource("3_hcchk")]
-position = Vector2(227, 1)
+position = Vector2(183, 1)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 scale = Vector2(0.999142, 1)
