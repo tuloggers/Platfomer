@@ -10,6 +10,9 @@ extends CharacterBody2D
 @onready var anim := $AnimatedSprite2D
 @onready var animTree : AnimationTree = $AnimationTree
 
+const pushForce = 100
+const maxPushVelocity = 150
+
 var jump_counter : int = 0
 var jump_buffer_counter : int = 0
 var cayote_counter : int = 0
@@ -103,5 +106,12 @@ func _physics_process(_delta):
 		
 	
 	velocity.x = clamp(velocity.x, -max_speed, max_speed)
-
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collision_box = collision.get_collider()
+		
+		if collision_box.is_in_group("box") and abs(collision_box.get_linear_velocity().x) < maxPushVelocity:
+			collision_box.apply_central_impulse(collision.get_normal() * - pushForce)
+	
 	move_and_slide()
