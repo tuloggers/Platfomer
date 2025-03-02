@@ -227,6 +227,6 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Ball" parent="." groups=["box"] instance=ExtResource("5_hdspk")]
-position = Vector2(240, 1)
+position = Vector2(275, 0)
 collision_layer = 3
 collision_mask = 3
