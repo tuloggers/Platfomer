@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bqugp7t5xk0vl" path="res://icon.svg" id="1_womub"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6276d"]
-radius = 60.3692
+[sub_resource type="CircleShape2D" id="CircleShape2D_26v31"]
+radius = 9.0
 
-[node name="Box" type="RigidBody2D"]
+[node name="Box" type="RigidBody2D" groups=["box"]]
 lock_rotation = true
 constant_force = Vector2(5, 5)
 
@@ -14,6 +14,4 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_womub")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5.96046e-08, 0)
-scale = Vector2(0.15, 0.15)
-shape = SubResource("CircleShape2D_6276d")
+shape = SubResource("CircleShape2D_26v31")
