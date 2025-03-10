@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cha0chqehcljb"]
+[gd_scene load_steps=2 format=3 uid="uid://cha0chqehcljb"]
 
 [ext_resource type="Texture2D" uid="uid://bqugp7t5xk0vl" path="res://icon.svg" id="1_womub"]
 
@@ -11,4 +11,3 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("1_womub")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-

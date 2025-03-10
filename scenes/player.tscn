@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://clhhm5a4dnb5p"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_rwg3u"]
+[ext_resource type="Script" uid="uid://b8r56thy07g00" path="res://scripts/player.gd" id="1_rwg3u"]
 [ext_resource type="Texture2D" uid="uid://6utoxvlpj6ad" path="res://assets/Fireman rework.png" id="2_rdjmw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sflht"]
@@ -302,8 +302,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6i1mc"]
 _data = {
-"RESET": SubResource("Animation_cpdc8"),
-"idle": SubResource("Animation_jdn2f")
+&"RESET": SubResource("Animation_cpdc8"),
+&"idle": SubResource("Animation_jdn2f")
 }
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k54ox"]
