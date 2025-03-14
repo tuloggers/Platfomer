@@ -5,7 +5,7 @@ var box = preload("res://scenes/box.tscn")
 var ball = preload("res://scenes/ball.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	inst(Vector2(0,0),Vector2(10,10),Vector2(20,20))
+	inst(Vector2(0,0),Vector2(-40,10),Vector2(20,20))
 	
 
 
